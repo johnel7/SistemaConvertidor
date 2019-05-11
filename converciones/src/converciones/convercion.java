@@ -1,8 +1,13 @@
 
 package converciones;
 
+
+import com.l2fprod.gui.plaf.skin.SkinLookAndFeel;
 import java.awt.event.ItemEvent;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JFrame;
+import javax.swing.UIManager;
+import org.jvnet.substance.SubstanceLookAndFeel;
 
 
 /**
@@ -414,6 +419,23 @@ public class convercion extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+        
+        /*
+        JFrame.setDefaultLookAndFeelDecorated(true);
+        SubstanceLookAndFeel.setSkin("org.jvnet.substance.skin.CremeSkin");
+        SubstanceLookAndFeel.setCurrentTheme("org.jvnet.substance.theme.SubstanceCremeTheme");
+        */
+        
+            
+        //DECORAR FORMULARIOS CON TEMAS
+        try {
+            JFrame.setDefaultLookAndFeelDecorated(true); //decorar a formulario si
+            SkinLookAndFeel.setSkin(SkinLookAndFeel.loadThemePack("Themes/chaNinja-Bluethemepack.zip"));
+            UIManager.setLookAndFeel("com.l2fprod.gui.plaf.skin.SkinLookAndFeel");
+        } catch (Exception e) {
+        }
+        
+        /*
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -430,6 +452,8 @@ public class convercion extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(convercion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        */
+        
         //</editor-fold>
 
         /* Create and display the form */
