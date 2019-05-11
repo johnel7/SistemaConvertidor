@@ -7,8 +7,6 @@ import java.awt.event.ItemEvent;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
 import javax.swing.UIManager;
-import org.jvnet.substance.SubstanceLookAndFeel;
-
 
 /**
  *
@@ -26,7 +24,8 @@ public class convercion extends javax.swing.JFrame {
 
     public String [] getUnidades(String uni)
      {
-        String[] unidad = new String[12];
+        String[] unidad = new String[14];
+        
         if(uni.equalsIgnoreCase("MASA"))
         {
             unidad[0]="Seleccione una opcion";
@@ -65,18 +64,29 @@ public class convercion extends javax.swing.JFrame {
             unidad[4]="Centimetro cubico";
             unidad[5]="Decimetro cubico";
             unidad[6]="Kilometro";
-            unidad[7]="Litros ";
+            unidad[7]="Litros";
             unidad[8]="Metro cubicos";
             unidad[9]="Milimitro";
             unidad[10]="Pies Cubico";
             unidad[11]="Pulgadas cubico";
             unidad[12]="Yardas cubicos";
         }
+        if(uni.equalsIgnoreCase("TIEMPO"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Años (bisiestro)";
+            unidad[2]="Horas (media solar)";
+            unidad[3]="Minutos (medio solar)";
+            unidad[4]="Minutos (sidereo)";
+        }
     return unidad;
     }
+    
+    
     public String [] getSub(String uni)
      {
-        String[] unidad = new String[12];
+         /*PARA MASA*/
+        String[] unidad = new String[15];
         if(uni.equalsIgnoreCase("Arrobas"))
         {
             unidad[0]="Seleccione una opcion";
@@ -133,6 +143,257 @@ public class convercion extends javax.swing.JFrame {
             unidad[5]="Onzas troy";
             unidad[6]="Onzas avdp";
         }
+        
+        /*PARA LONGITUD*/
+        
+        if(uni.equalsIgnoreCase("Centimetros"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Angstroms";
+            unidad[2]="Kilometros";
+            unidad[3]="Roja de Cd";
+            unidad[4]="Metros";
+            unidad[5]="Milimetros";
+            unidad[6]="MIllas";
+            unidad[7]="Pies";
+            unidad[8]="Pulgadas";
+            unidad[9]="Yardas";
+        }
+        if(uni.equalsIgnoreCase("Decimetro"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Centimetros";
+            unidad[2]="Metros";
+            unidad[3]="Pies";
+            unidad[4]="Pulgadas";
+            
+        }
+        if(uni.equalsIgnoreCase("Kilometros"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Centimetro";
+            unidad[2]="Leguas";
+            unidad[3]="Metros";
+            unidad[4]="Milimetros";
+            unidad[5]="Millas";
+            unidad[6]="Pies";
+            unidad[7]="Pulgadas";
+            unidad[8]="Yardas";
+        }
+        if(uni.equalsIgnoreCase("Metros"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Centimetros";
+            unidad[2]="Kilometros";
+            unidad[3]="Milimetros";
+            unidad[4]="Millas";
+            unidad[5]="Nanometros";
+            unidad[6]="Pies";
+            unidad[7]="Pulgadas";
+            unidad[8]="Toesas";
+            unidad[9]="Yardas";
+        }
+        if(uni.equalsIgnoreCase("Mili Pulgadas"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Centimetros";
+            unidad[2]="Kilometros";
+            unidad[3]="Milimetros";
+            unidad[4]="Pies";
+            unidad[5]="Pulgadas";
+            unidad[6]="Yardas";
+        }
+        if(uni.equalsIgnoreCase("Milimetros"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Centimetros";
+            unidad[2]="Decimetros";
+            unidad[3]="Metros";
+            unidad[4]="Micrones";
+            unidad[5]="Pies";
+            unidad[6]="Pulgadas";
+            unidad[7]="Yardas";
+        }
+        if(uni.equalsIgnoreCase("Millas"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Centimetros";
+            unidad[2]="kilometros";
+            unidad[3]="Leguas";
+            unidad[4]="Metros";
+            unidad[5]="Milimetros";
+            unidad[6]="pies";
+            unidad[7]="Pulgadas";
+            unidad[8]="Yardas";
+        }
+        if(uni.equalsIgnoreCase("Nudos Lungitud"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Metros";
+            unidad[2]="Kilometros";
+            unidad[3]="Millas";
+            unidad[4]="Pies";
+            unidad[5]="Yardas";
+        }
+        if(uni.equalsIgnoreCase("Pies"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Centimetros";
+            unidad[2]="Kilometros";
+            unidad[3]="Metros";
+            unidad[4]="Milimetros";
+            unidad[5]="Millas";
+            unidad[6]="Pulgadsa";
+            unidad[7]="Yardas";
+        }
+        if(uni.equalsIgnoreCase("Pulgadas"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="centimetros";
+            unidad[2]="Kilometros";
+            unidad[3]="Metros";
+            unidad[4]="Metros";
+            unidad[5]="Milimetros";
+            unidad[6]="Pies";
+            unidad[7]="Yardas";
+        }
+        
+        if(uni.equalsIgnoreCase("Yardas"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Kilometros";
+            unidad[2]="Metros";
+            unidad[3]="Milimetros";
+            unidad[4]="Millas";
+            unidad[5]="Pies";
+            unidad[6]="Pulgadas";
+        }
+        
+        
+        /*PARA VOLUMEN*/
+        if(uni.equalsIgnoreCase("Acre-Feet"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Galones(US)";
+            unidad[2]="Litros";
+            unidad[3]="Metros Cubicos";
+        }
+        if(uni.equalsIgnoreCase("Acre Pulgada"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Galones(US)";
+            unidad[2]="Metros Cubicos";
+            unidad[3]="Pies Cubicos";
+        }
+        if(uni.equalsIgnoreCase("Barriles"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Barriles(US dry)";
+            unidad[2]="Galones(US liq)";
+            unidad[3]="Galones(UK)";
+            unidad[4]="Litros";
+            unidad[5]="Metros Cubicos";
+            unidad[6]="Pies Cubicos";
+            unidad[7]="Pulgadas Cubicas";
+        }
+        if(uni.equalsIgnoreCase("Centimetro cubico"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Galones(US dry)";
+            unidad[2]="Metros Cubicos";
+            unidad[3]="Pies Cubicos";
+            unidad[4]="Pulgadas Cubicas";
+            unidad[5]="Yardas Cubicas";
+        }
+        if(uni.equalsIgnoreCase("Decimetro cubico"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Centimetro Cubicos";
+            unidad[1]="Litros";
+            unidad[2]="Metros Cubicos";
+            unidad[3]="Pies Cubicos";
+        }
+        if(uni.equalsIgnoreCase("Kilometro"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Centimetro Cubicos";
+            unidad[1]="Galones(UK)";
+            unidad[1]="Galones(US dry)";
+            unidad[1]="Galones(US liq)";
+            unidad[2]="Litros";
+            unidad[1]="Metros Cubicos";
+            unidad[3]="Pies Cubicos";
+            unidad[4]="Pulgadas Cubicas";
+            unidad[5]="Yardas Cubicas";
+        }
+        if(uni.equalsIgnoreCase("Litros"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Pies cubicos";
+            unidad[2]="Pulgadas cubico";
+            unidad[3]="Yardas cubicos";
+        }
+        if(uni.equalsIgnoreCase("Metro cubicos"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Centimetro cubicos";
+            unidad[2]="Litros";
+            unidad[3]="Pies Cubico";
+            unidad[4]="Pulgadas cubico";
+            unidad[5]="Yardas cubicos";
+        }
+        if(uni.equalsIgnoreCase("Milimitro"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Litros";
+        }
+        if(uni.equalsIgnoreCase("Pies Cubico"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Centimetros cubicos";
+            unidad[2]="Litros";
+        }
+         if(uni.equalsIgnoreCase("Pulgadas cubico"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Litros";
+            unidad[2]="Metros Cubicos";
+            unidad[3]="Milimitros";
+        }
+          if(uni.equalsIgnoreCase("Yardas cubicos"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Centimetro cubicos";
+            unidad[2]="litros";
+            unidad[3]="Onzas fl";
+            unidad[4]="Pies Cubicos";
+            unidad[5]="Pulgadas cubicas";
+        }
+          
+        /*PARA TIEMPO*/
+        if(uni.equalsIgnoreCase("Años (bisiestro)"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Dias(medio solar)";
+        }
+        if(uni.equalsIgnoreCase("Horas (media solar)"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Dias (sidereo)";
+            
+        }
+        if(uni.equalsIgnoreCase("Minutos (medio solar)"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Dias (medio solar)";
+            unidad[2]="Dias (sidereo)";
+        }
+        if(uni.equalsIgnoreCase("Minutos (sidereo)"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Meses (medio calendario)";
+            unidad[2]="Minutos (medio solar)";
+        }
         return unidad;
      }
     
@@ -166,7 +427,7 @@ public class convercion extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        cbx1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una opcion", "MASA", "LONGITUD", "VOLUMEN" }));
+        cbx1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una opcion", "MASA", "LONGITUD", "VOLUMEN", "TIEMPO" }));
         cbx1.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 cbx1ItemStateChanged(evt);
