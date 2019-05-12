@@ -74,10 +74,10 @@ public class convercion extends javax.swing.JFrame {
         if(uni.equalsIgnoreCase("TIEMPO"))
         {
             unidad[0]="Seleccione una opcion";
-            unidad[1]="Años (bisiestro)";
-            unidad[2]="Horas (media solar)";
-            unidad[3]="Minutos (medio solar)";
-            unidad[4]="Minutos (sidereo)";
+            unidad[1]="Años(bisiesto)";
+            unidad[2]="Horas(media solar)";
+            unidad[3]="Minutos(medio solar)";
+            unidad[4]="Minutos(sidereo)";
         }
     return unidad;
     }
@@ -242,19 +242,18 @@ public class convercion extends javax.swing.JFrame {
             unidad[3]="Metros";
             unidad[4]="Milimetros";
             unidad[5]="Millas";
-            unidad[6]="Pulgadsa";
+            unidad[6]="Pulgadas";
             unidad[7]="Yardas";
         }
         if(uni.equalsIgnoreCase("Pulgadas"))
         {
             unidad[0]="Seleccione una opcion";
-            unidad[1]="centimetros";
+            unidad[1]="Centimetros";
             unidad[2]="Kilometros";
             unidad[3]="Metros";
-            unidad[4]="Metros";
-            unidad[5]="Milimetros";
-            unidad[6]="Pies";
-            unidad[7]="Yardas";
+            unidad[4]="Milimetros";
+            unidad[5]="Pies";
+            unidad[6]="Yardas";
         }
         
         if(uni.equalsIgnoreCase("Yardas"))
@@ -370,28 +369,28 @@ public class convercion extends javax.swing.JFrame {
         }
           
         /*================================ PARA TIEMPO =======================================*/
-        if(uni.equalsIgnoreCase("Años (bisiestro)"))
+        if(uni.equalsIgnoreCase("Años(bisiesto)"))
         {
             unidad[0]="Seleccione una opcion";
             unidad[1]="Dias(medio solar)";
         }
-        if(uni.equalsIgnoreCase("Horas (media solar)"))
+        if(uni.equalsIgnoreCase("Horas(media solar)"))
         {
             unidad[0]="Seleccione una opcion";
-            unidad[1]="Dias (sidereo)";
+            unidad[1]="Dias(sidereo)";
             
         }
-        if(uni.equalsIgnoreCase("Minutos (medio solar)"))
+        if(uni.equalsIgnoreCase("Minutos(medio solar)"))
         {
             unidad[0]="Seleccione una opcion";
-            unidad[1]="Dias (medio solar)";
-            unidad[2]="Dias (sidereo)";
+            unidad[1]="Dias(medio solar)";
+            unidad[2]="Dias(sidereo)";
         }
-        if(uni.equalsIgnoreCase("Minutos (sidereo)"))
+        if(uni.equalsIgnoreCase("Minutos(sidereo)"))
         {
             unidad[0]="Seleccione una opcion";
-            unidad[1]="Meses (medio calendario)";
-            unidad[2]="Minutos (medio solar)";
+            unidad[1]="Meses(medio calendario)";
+            unidad[2]="Minutos(medio solar)";
         }
         return unidad;
      }
@@ -790,14 +789,69 @@ public class convercion extends javax.swing.JFrame {
             txtResultado.setText(""+(valor * 2027));
         }
        
-         
-         
-         
-         
-         
-         
-         
+         //*************** PARA PIES
+        if(cbx2.getSelectedItem()=="Pies" && cbx3.getSelectedItem()=="Centimetros"){
+            txtResultado.setText(""+(valor*30.48));
+        }
+        else if(cbx2.getSelectedItem()=="Pies" && cbx3.getSelectedItem()=="Kilometros"){
+            txtResultado.setText(""+(valor * 0.0003048));
+        }
+        else if(cbx2.getSelectedItem()=="Pies" && cbx3.getSelectedItem()=="Metros"){
+            txtResultado.setText(""+(valor * 0.3048));
+        }
+        else if(cbx2.getSelectedItem()=="Pies" && cbx3.getSelectedItem()=="Milimetros"){
+            txtResultado.setText(""+(valor * 304.8));
+        }
+        else if(cbx2.getSelectedItem()=="Pies" && cbx3.getSelectedItem()=="Millas"){
+            txtResultado.setText(""+(valor * 0.000189393));
+        }
+         else if(cbx2.getSelectedItem()=="Pies" && cbx3.getSelectedItem()=="Pulgadas"){
+            txtResultado.setText(""+(valor * 12));
+        }
+        else if(cbx2.getSelectedItem()=="Pies" && cbx3.getSelectedItem()=="Yardas"){
+            txtResultado.setText(""+(valor * 0.33333));
+        }
         
+        //****** PARA PULGADAS
+        if(cbx2.getSelectedItem()=="Pulgadas" && cbx3.getSelectedItem()=="Centimetros"){
+            txtResultado.setText(""+(valor* 2.54));
+        }
+        else if(cbx2.getSelectedItem()=="Pulgadas" && cbx3.getSelectedItem()=="Kilometros"){
+            txtResultado.setText(""+(valor * (2.54*Math.pow(10,-5))));
+        }
+        else if(cbx2.getSelectedItem()=="Pulgadas" && cbx3.getSelectedItem()=="Metros"){
+            txtResultado.setText(""+(valor * 0.0254));
+        }
+        else if(cbx2.getSelectedItem()=="Pulgadas" && cbx3.getSelectedItem()=="Milimetros"){
+            txtResultado.setText(""+(valor * 25.4));
+        }
+        else if(cbx2.getSelectedItem()=="Pulgadas" && cbx3.getSelectedItem()=="Pies"){
+            txtResultado.setText(""+(valor * 0.083333));
+        }
+         else if(cbx2.getSelectedItem()=="Pulgadas" && cbx3.getSelectedItem()=="Yardas"){
+            txtResultado.setText(""+(valor * 0.027777));
+        }
+        
+        //************PARA YARDAS
+        if(cbx2.getSelectedItem()=="Yardas" && cbx3.getSelectedItem()=="Kilometros"){
+            txtResultado.setText(""+(valor* 0.0009144));
+        }
+        else if(cbx2.getSelectedItem()=="Yardas" && cbx3.getSelectedItem()=="Metros"){
+            txtResultado.setText(""+(valor * 0.9144));
+        }
+        else if(cbx2.getSelectedItem()=="Yardas" && cbx3.getSelectedItem()=="Milimetros"){
+            txtResultado.setText(""+(valor * 914.4));
+        }
+        else if(cbx2.getSelectedItem()=="Yardas" && cbx3.getSelectedItem()=="Millas"){
+            txtResultado.setText(""+(valor * 0.00056818));
+        }
+        else if(cbx2.getSelectedItem()=="Yardas" && cbx3.getSelectedItem()=="Pies"){
+            txtResultado.setText(""+(valor * 3));
+        }
+         else if(cbx2.getSelectedItem()=="Yardas" && cbx3.getSelectedItem()=="Pulgadas"){
+            txtResultado.setText(""+(valor * 36));
+        }
+       
 
         //==============================VOLUMEN==========================================================
         if(cbx2.getSelectedItem()=="Litros" && cbx3.getSelectedItem()=="Litros"){
@@ -812,6 +866,32 @@ public class convercion extends javax.swing.JFrame {
         else if(cbx2.getSelectedItem()=="Litros" && cbx3.getSelectedItem()=="Barriles"){
             txtResultado.setText(""+(valor *0.0083864));
         }
+        
+        //==============================TIEMPO==========================================================
+        //*******PARA AÑOS (bisiesto)
+        if(cbx2.getSelectedItem()=="Años(bisiesto)" && cbx3.getSelectedItem()=="Dias(medio solar)"){
+            txtResultado.setText(""+valor * 366);
+        }    
+        //***** Horas (media solar)
+        if(cbx2.getSelectedItem()=="Horas(media solar)" && cbx3.getSelectedItem()=="Dias(sidereo)"){
+            txtResultado.setText(""+valor * 0.041780746);
+        } 
+        
+        //*********Minutos (medio solar)
+        if(cbx2.getSelectedItem()=="Minutos(medio solar)" && cbx3.getSelectedItem()=="Dias(medio solar)"){
+            txtResultado.setText(""+valor * 0.000694444);
+        }
+        else if(cbx2.getSelectedItem()=="Minutos(medio solar)" && cbx3.getSelectedItem()=="Dias(sidereo)"){
+            txtResultado.setText(""+(valor * 0.0006963457));
+        }
+        //*********Minutos (sidereo)
+        if(cbx2.getSelectedItem()=="Minutos(sidereo)" && cbx3.getSelectedItem()=="Meses(medio calendario)"){
+            txtResultado.setText(""+valor* (2.2768712 * Math.pow(10,-5)));
+        }
+        else if(cbx2.getSelectedItem()=="Minutos(sidereo)" && cbx3.getSelectedItem()=="Minutos(medio solar)"){
+            txtResultado.setText(""+(valor *0.99726957));
+        }
+            
 
 
     }//GEN-LAST:event_btnConvertirActionPerformed
