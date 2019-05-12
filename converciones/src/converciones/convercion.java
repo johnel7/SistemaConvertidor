@@ -43,13 +43,13 @@ public class convercion extends javax.swing.JFrame {
         {
             unidad[0]="Seleccione una opcion";
             unidad[1]="Centimetros";
-            unidad[2]="Decimetro";
+            unidad[2]="Decimetros";
             unidad[3]="Kilometros";
             unidad[4]="Metros";
             unidad[5]="Mili Pulgadas";
             unidad[6]="Milimetros";
             unidad[7]="Millas";
-            unidad[8]="Nudos Lungitud";
+            unidad[8]="Nudos Longitud";
             unidad[9]="Pies";
             unidad[10]="Pulgadas";
             unidad[11]="Yardas";
@@ -85,7 +85,7 @@ public class convercion extends javax.swing.JFrame {
     
     public String [] getSub(String uni)
      {
-         /*PARA MASA*/
+         /*============================= PARA MASA =====================================*/
         String[] unidad = new String[15];
         if(uni.equalsIgnoreCase("Arrobas"))
         {
@@ -144,8 +144,7 @@ public class convercion extends javax.swing.JFrame {
             unidad[6]="Onzas avdp";
         }
         
-        /*PARA LONGITUD*/
-        
+  /*============================ PARA LONGITUD ===========================================*/
         if(uni.equalsIgnoreCase("Centimetros"))
         {
             unidad[0]="Seleccione una opcion";
@@ -154,12 +153,12 @@ public class convercion extends javax.swing.JFrame {
             unidad[3]="Roja de Cd";
             unidad[4]="Metros";
             unidad[5]="Milimetros";
-            unidad[6]="MIllas";
+            unidad[6]="Millas";
             unidad[7]="Pies";
             unidad[8]="Pulgadas";
             unidad[9]="Yardas";
         }
-        if(uni.equalsIgnoreCase("Decimetro"))
+        if(uni.equalsIgnoreCase("Decimetros"))
         {
             unidad[0]="Seleccione una opcion";
             unidad[1]="Centimetros";
@@ -171,7 +170,7 @@ public class convercion extends javax.swing.JFrame {
         if(uni.equalsIgnoreCase("Kilometros"))
         {
             unidad[0]="Seleccione una opcion";
-            unidad[1]="Centimetro";
+            unidad[1]="Centimetros";
             unidad[2]="Leguas";
             unidad[3]="Metros";
             unidad[4]="Milimetros";
@@ -218,15 +217,15 @@ public class convercion extends javax.swing.JFrame {
         {
             unidad[0]="Seleccione una opcion";
             unidad[1]="Centimetros";
-            unidad[2]="kilometros";
+            unidad[2]="Kilometros";
             unidad[3]="Leguas";
             unidad[4]="Metros";
             unidad[5]="Milimetros";
-            unidad[6]="pies";
+            unidad[6]="Pies";
             unidad[7]="Pulgadas";
             unidad[8]="Yardas";
         }
-        if(uni.equalsIgnoreCase("Nudos Lungitud"))
+        if(uni.equalsIgnoreCase("Nudos Longitud"))
         {
             unidad[0]="Seleccione una opcion";
             unidad[1]="Metros";
@@ -270,7 +269,7 @@ public class convercion extends javax.swing.JFrame {
         }
         
         
-        /*PARA VOLUMEN*/
+        /*========================= PARA VOLUMEN ==============================================*/
         if(uni.equalsIgnoreCase("Acre-Feet"))
         {
             unidad[0]="Seleccione una opcion";
@@ -370,7 +369,7 @@ public class convercion extends javax.swing.JFrame {
             unidad[5]="Pulgadas cubicas";
         }
           
-        /*PARA TIEMPO*/
+        /*================================ PARA TIEMPO =======================================*/
         if(uni.equalsIgnoreCase("Años (bisiestro)"))
         {
             unidad[0]="Seleccione una opcion";
@@ -460,19 +459,19 @@ public class convercion extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(cbx2, 0, 225, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(cbx2, 0, 248, Short.MAX_VALUE)
                     .addComponent(txtNum1))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(cbx2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 188, Short.MAX_VALUE)
                 .addComponent(txtNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -496,11 +495,14 @@ public class convercion extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtResultado)
-                    .addComponent(cbx3, 0, 236, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(cbx3, 0, 236, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(txtResultado)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -508,7 +510,7 @@ public class convercion extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(cbx3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 175, Short.MAX_VALUE)
                 .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -535,16 +537,12 @@ public class convercion extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(cbx1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnConvertir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(37, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnConvertir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(58, 58, 58))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -568,7 +566,7 @@ public class convercion extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
@@ -610,18 +608,196 @@ public class convercion extends javax.swing.JFrame {
         }
 
         //==============================LONGITUD==========================================================
-        if(cbx2.getSelectedItem()=="Metros" && cbx3.getSelectedItem()=="Metros"){
-            txtResultado.setText(""+valor);
+        //*********PARA CENTIMETROS
+        if(cbx2.getSelectedItem()=="Centimetros" && cbx3.getSelectedItem()=="Angstroms"){
+            txtResultado.setText(""+(valor*100000000));
         }
-        else if(cbx2.getSelectedItem()=="Metros" && cbx3.getSelectedItem()=="Yardas"){
-            txtResultado.setText(""+(valor *1.0936));
+        else if(cbx2.getSelectedItem()=="Centimetros" && cbx3.getSelectedItem()=="Kilometros"){
+            txtResultado.setText(""+(valor *0.00001));
+        }
+        else if(cbx2.getSelectedItem()=="Centimetros" && cbx3.getSelectedItem()=="Roja de Cd"){
+            txtResultado.setText(""+(valor *15531.6441));
+        }
+        else if(cbx2.getSelectedItem()=="Centimetros" && cbx3.getSelectedItem()=="Metros"){
+            txtResultado.setText(""+(valor *0.01));
+        }
+        else if(cbx2.getSelectedItem()=="Centimetros" && cbx3.getSelectedItem()=="Milimetros"){
+            txtResultado.setText(""+(valor *10));
+        }
+        else if(cbx2.getSelectedItem()=="Centimetros" && cbx3.getSelectedItem()=="Millas"){
+            txtResultado.setText(""+(valor / 160934.4));
+        }
+        else if(cbx2.getSelectedItem()=="Centimetros" && cbx3.getSelectedItem()=="Pies"){
+            txtResultado.setText(""+(valor *0.0328084));
+        }
+        else if(cbx2.getSelectedItem()=="Centimetros" && cbx3.getSelectedItem()=="Pulgadas"){
+            txtResultado.setText(""+(valor *0.39370079));
+        }
+        else if(cbx2.getSelectedItem()=="Centimetros" && cbx3.getSelectedItem()=="Yardas"){
+            txtResultado.setText(""+(valor *0.010936133));
+        }
+        //*********PARA DECIMETROS
+        if(cbx2.getSelectedItem()=="Decimetros" && cbx3.getSelectedItem()=="Centimetros"){
+            txtResultado.setText(""+(valor*10));
+        }
+        else if(cbx2.getSelectedItem()=="Decimetros" && cbx3.getSelectedItem()=="Metros"){
+            txtResultado.setText(""+(valor *0.1));
+        }
+        else if(cbx2.getSelectedItem()=="Decimetros" && cbx3.getSelectedItem()=="Pies"){
+            txtResultado.setText(""+(valor *0.32808399));
+        }
+        else if(cbx2.getSelectedItem()=="Decimetros" && cbx3.getSelectedItem()=="Pulgadas"){
+            txtResultado.setText(""+(valor *3.9370779));
+        }
+         //*********PARA KILOMETROS
+         if(cbx2.getSelectedItem()=="Kilometros" && cbx3.getSelectedItem()=="Centimetros"){
+            txtResultado.setText(""+(valor*100000));
+        }
+        else if(cbx2.getSelectedItem()=="Kilometros" && cbx3.getSelectedItem()=="Leguas"){
+            txtResultado.setText(""+(valor *0.207123));
+        }
+        else if(cbx2.getSelectedItem()=="Kilometros" && cbx3.getSelectedItem()=="Metros"){
+            txtResultado.setText(""+(valor *1000));
+        }
+        else if(cbx2.getSelectedItem()=="Kilometros" && cbx3.getSelectedItem()=="Milimetros"){
+            txtResultado.setText(""+(valor / 0.000001000));
+        }
+        else if(cbx2.getSelectedItem()=="Kilometros" && cbx3.getSelectedItem()=="Millas"){
+            txtResultado.setText(""+(valor *0.621371));
+        }
+        else if(cbx2.getSelectedItem()=="Kilometros" && cbx3.getSelectedItem()=="Pies"){
+            txtResultado.setText(""+(valor *3280.8398));
+        }
+        else if(cbx2.getSelectedItem()=="Kilometros" && cbx3.getSelectedItem()=="Pulgadas"){
+            txtResultado.setText(""+(valor *39370.08));
+        }
+        else if(cbx2.getSelectedItem()=="Kilometros" && cbx3.getSelectedItem()=="Yardas"){
+            txtResultado.setText(""+(valor *1093.613));
+        }
+        
+         //*********PARA METROS
+         if(cbx2.getSelectedItem()=="Metros" && cbx3.getSelectedItem()=="Centimetros"){
+            txtResultado.setText(""+(valor*100));
+        }
+        else if(cbx2.getSelectedItem()=="Metros" && cbx3.getSelectedItem()=="Kilometros"){
+            txtResultado.setText(""+(valor *0.001));
+        }
+        else if(cbx2.getSelectedItem()=="Metros" && cbx3.getSelectedItem()=="Milimetros"){
+            txtResultado.setText(""+(valor *1000));
+        }
+        else if(cbx2.getSelectedItem()=="Metros" && cbx3.getSelectedItem()=="Millas"){
+            txtResultado.setText(""+(valor * 0.000621371));
+        }
+        else if(cbx2.getSelectedItem()=="Metros" && cbx3.getSelectedItem()=="Nanometros"){
+            txtResultado.setText(""+(valor * 1000000000));
+        }
+        else if(cbx2.getSelectedItem()=="Metros" && cbx3.getSelectedItem()=="Pies"){
+            txtResultado.setText(""+(valor *3.2808399));
         }
         else if(cbx2.getSelectedItem()=="Metros" && cbx3.getSelectedItem()=="Pulgadas"){
-            txtResultado.setText(""+(valor *39.370));
+            txtResultado.setText(""+(valor *39.370079));
         }
-        else if(cbx2.getSelectedItem()=="Metros" && cbx3.getSelectedItem()=="Centimetros"){
-            txtResultado.setText(""+(valor *100));
+        else if(cbx2.getSelectedItem()=="Metros" && cbx3.getSelectedItem()=="Toesas"){
+            txtResultado.setText(""+(valor *0.198838));
         }
+         else if(cbx2.getSelectedItem()=="Metros" && cbx3.getSelectedItem()=="Yardas"){
+            txtResultado.setText(""+(valor *1.0936133));
+        }
+         
+        //*********PARA MILI PULGADAS
+         if(cbx2.getSelectedItem()=="Mili Pulgadas" && cbx3.getSelectedItem()=="Centimetros"){
+            txtResultado.setText(""+(valor*0.00254));
+        }
+        else if(cbx2.getSelectedItem()=="Mili Pulgadas" && cbx3.getSelectedItem()=="Kilometros"){
+            txtResultado.setText(""+(valor *(2.54*Math.pow(10,-8))));
+        }
+        else if(cbx2.getSelectedItem()=="Mili Pulgadas" && cbx3.getSelectedItem()=="Milimetros"){
+            txtResultado.setText(""+(valor *0.0254));
+        }
+        else if(cbx2.getSelectedItem()=="Mili Pulgadas" && cbx3.getSelectedItem()=="Pies"){
+            txtResultado.setText(""+(valor * (8.333*Math.pow(10,-5))));
+        }
+        else if(cbx2.getSelectedItem()=="Mili Pulgadas" && cbx3.getSelectedItem()=="Pulgadas"){
+            txtResultado.setText(""+(valor * 0.001));
+        }
+        else if(cbx2.getSelectedItem()=="Mili Pulgadas" && cbx3.getSelectedItem()=="Yardas"){
+            txtResultado.setText(""+(valor *(2.778*Math.pow(10,-5))));
+        }
+         
+       //*********PARA MILIMETROS
+         if(cbx2.getSelectedItem()=="Milimetros" && cbx3.getSelectedItem()=="Centimetros"){
+            txtResultado.setText(""+(valor*0.1));
+        }
+        else if(cbx2.getSelectedItem()=="Milimetros" && cbx3.getSelectedItem()=="Decimetros"){
+            txtResultado.setText(""+(valor *0.01));
+        }
+        else if(cbx2.getSelectedItem()=="Milimetros" && cbx3.getSelectedItem()=="Metros"){
+            txtResultado.setText(""+(valor *0.001));
+        }
+        else if(cbx2.getSelectedItem()=="Milimetros" && cbx3.getSelectedItem()=="Micrones"){
+            txtResultado.setText(""+(valor * 1000));
+        }
+        else if(cbx2.getSelectedItem()=="Milimetros" && cbx3.getSelectedItem()=="Pies"){
+            txtResultado.setText(""+(valor * 0.00328084));
+        }
+        else if(cbx2.getSelectedItem()=="Milimetros" && cbx3.getSelectedItem()=="Pulgadas"){
+            txtResultado.setText(""+(valor *0.039370));
+        }
+        else if(cbx2.getSelectedItem()=="Milimetros" && cbx3.getSelectedItem()=="Yardas"){
+            txtResultado.setText(""+(valor *0.001093613));
+        }
+         
+        //*********PARA MILLAS
+         if(cbx2.getSelectedItem()=="Millas" && cbx3.getSelectedItem()=="Centimetros"){
+            txtResultado.setText(""+(valor*160934.4));
+        }
+        else if(cbx2.getSelectedItem()=="Millas" && cbx3.getSelectedItem()=="Kilometros"){
+            txtResultado.setText(""+(valor *1.609344));
+        }
+        else if(cbx2.getSelectedItem()=="Millas" && cbx3.getSelectedItem()=="Leguas"){
+            txtResultado.setText(""+(valor *0.333));
+        }
+        else if(cbx2.getSelectedItem()=="Millas" && cbx3.getSelectedItem()=="Metros"){
+            txtResultado.setText(""+(valor * 1609.344));
+        }
+        else if(cbx2.getSelectedItem()=="Millas" && cbx3.getSelectedItem()=="Milimetros"){
+            txtResultado.setText(""+(valor * 1609344));
+        }
+        else if(cbx2.getSelectedItem()=="Millas" && cbx3.getSelectedItem()=="Pies"){
+            txtResultado.setText(""+(valor *5280));
+        }
+        else if(cbx2.getSelectedItem()=="Millas" && cbx3.getSelectedItem()=="Pulgadas"){
+            txtResultado.setText(""+(valor *63360));
+        }
+         else if(cbx2.getSelectedItem()=="Millas" && cbx3.getSelectedItem()=="Yardas"){
+            txtResultado.setText(""+(valor *1760));
+        }
+         
+       //************* PARA Nudos Longitud
+       if(cbx2.getSelectedItem()=="Nudos Longitud" && cbx3.getSelectedItem()=="Metros"){
+            txtResultado.setText(""+(valor*1852));
+        }
+        else if(cbx2.getSelectedItem()=="Nudos Longitud" && cbx3.getSelectedItem()=="Kilometros"){
+            txtResultado.setText(""+(valor *1.852));
+        }
+        else if(cbx2.getSelectedItem()=="Nudos Longitud" && cbx3.getSelectedItem()=="Millas"){
+            txtResultado.setText(""+(valor *1.152));
+        }
+        else if(cbx2.getSelectedItem()=="Nudos Longitud" && cbx3.getSelectedItem()=="Pies"){
+            txtResultado.setText(""+(valor * 6076.11));
+        }
+        else if(cbx2.getSelectedItem()=="Nudos Longitud" && cbx3.getSelectedItem()=="Yardas"){
+            txtResultado.setText(""+(valor * 2027));
+        }
+       
+         
+         
+         
+         
+         
+         
+         
+        
 
         //==============================VOLUMEN==========================================================
         if(cbx2.getSelectedItem()=="Litros" && cbx3.getSelectedItem()=="Litros"){
@@ -637,24 +813,6 @@ public class convercion extends javax.swing.JFrame {
             txtResultado.setText(""+(valor *0.0083864));
         }
 
-        /*
-        switch(cbx2.getSelectedIndex()){
-            case 1:
-            lb = kg*2.205;
-            txtResultado.setText(""+lb);
-            break;
-            case 2:
-            g=kg *(1000/1);
-            txtResultado.setText(""+g);
-            break;
-
-        }  */
-
-        //lb = kg*2.205;
-        //g=kg *(1000/1);
-
-        // txtResultado.setText(""+lb);
-        // txtResultado.setText(""+g);
 
     }//GEN-LAST:event_btnConvertirActionPerformed
 
