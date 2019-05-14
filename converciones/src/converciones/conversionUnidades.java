@@ -12,12 +12,12 @@ import javax.swing.UIManager;
  *
  * @author USUARIO
  */
-public class convercion extends javax.swing.JFrame {
+public class conversionUnidades extends javax.swing.JFrame {
 
     /**
      * Creates new form convercion
      */
-    public convercion() {
+    public conversionUnidades() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -79,6 +79,19 @@ public class convercion extends javax.swing.JFrame {
             unidad[3]="Minutos(medio solar)";
             unidad[4]="Minutos(sidereo)";
         }
+        if(uni.equalsIgnoreCase("EXTRAS"))
+        {
+            unidad[0]="Seleccione una opcion";
+            unidad[1]="Area";
+            unidad[2]="Volumen";
+            unidad[3]="Densidad";
+            unidad[4]="Frecuencia";
+            unidad[5]="Velocidad";
+            unidad[6]="Momentun";
+            unidad[7]="Fuerza";
+            unidad[8]="Presion";
+            unidad[9]="Trabajo";
+        }
     return unidad;
     }
     
@@ -122,6 +135,7 @@ public class convercion extends javax.swing.JFrame {
             unidad[1]="Gramos";
             unidad[2]="Libras (avdp)";
             unidad[3]="Granos";
+            unidad[4]="Kilogramos";
         }
         if(uni.equalsIgnoreCase("Libras AVDP"))
         {
@@ -307,22 +321,22 @@ public class convercion extends javax.swing.JFrame {
         {
             unidad[0]="Seleccione una opcion";
             unidad[1]="Centimetro Cubicos";
-            unidad[1]="Litros";
-            unidad[2]="Metros Cubicos";
-            unidad[3]="Pies Cubicos";
+            unidad[2]="Litros";
+            unidad[3]="Metros Cubicos";
+            unidad[4]="Pies Cubicos";
         }
         if(uni.equalsIgnoreCase("Kilometro"))
         {
             unidad[0]="Seleccione una opcion";
             unidad[1]="Centimetro Cubicos";
-            unidad[1]="Galones(UK)";
-            unidad[1]="Galones(US dry)";
-            unidad[1]="Galones(US liq)";
-            unidad[2]="Litros";
-            unidad[1]="Metros Cubicos";
-            unidad[3]="Pies Cubicos";
-            unidad[4]="Pulgadas Cubicas";
-            unidad[5]="Yardas Cubicas";
+            unidad[2]="Galones(UK)";
+            unidad[3]="Galones(US dry)";
+            unidad[4]="Galones(US liq)";
+            unidad[5]="Litros";
+            unidad[6]="Metros Cubicos";
+            unidad[7]="Pies Cubicos";
+            unidad[8]="Pulgadas Cubicas";
+            unidad[9]="Yardas Cubicas";
         }
         if(uni.equalsIgnoreCase("Litros"))
         {
@@ -412,9 +426,11 @@ public class convercion extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         cbx2 = new javax.swing.JComboBox<>();
         txtNum1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         cbx3 = new javax.swing.JComboBox<>();
         txtResultado = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 204));
@@ -439,7 +455,7 @@ public class convercion extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         cbx2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una opcion", " " }));
@@ -454,28 +470,36 @@ public class convercion extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setText("DE");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cbx2, 0, 248, Short.MAX_VALUE)
-                    .addComponent(txtNum1))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtNum1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE)
+                    .addComponent(cbx2, 0, 248, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(126, 126, 126)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cbx2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 188, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 159, Short.MAX_VALUE)
                 .addComponent(txtNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel2.setBackground(new java.awt.Color(153, 153, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         cbx3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una opcion", " " }));
@@ -490,6 +514,8 @@ public class convercion extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setText("A");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -503,13 +529,19 @@ public class convercion extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(txtResultado)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(117, 117, 117))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(12, 12, 12)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cbx3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 175, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 149, Short.MAX_VALUE)
                 .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -596,14 +628,77 @@ public class convercion extends javax.swing.JFrame {
         valor=Double.parseDouble(txtNum1.getText());
 
         //===============================MASA==================================================================
-        if(cbx2.getSelectedItem()=="Kilogramos" && cbx3.getSelectedItem()=="Kilogramos"){
-            txtResultado.setText(""+valor);
+         //para arrobas
+        if(cbx2.getSelectedItem()=="Arrobas" && cbx3.getSelectedItem()=="Kilogramos"){
+            txtResultado.setText(""+(valor*(11.340)));
         }
+        //para centigramos
+        else if(cbx2.getSelectedItem()=="Centigramo" && cbx3.getSelectedItem()=="Gramos"){
+            txtResultado.setText(""+(valor *(0.01)));
+        }
+        //para gramos
+        else if(cbx2.getSelectedItem()=="Gramos" && cbx3.getSelectedItem()=="Decigramos"){
+            txtResultado.setText(""+(valor*10));
+        }
+        else if(cbx2.getSelectedItem()=="Gramos" && cbx3.getSelectedItem()=="Kilogramos"){
+            txtResultado.setText(""+(valor*0.001));
+        }
+        else if(cbx2.getSelectedItem()=="Gramos" && cbx3.getSelectedItem()=="Onzas (Troy)"){
+            txtResultado.setText(""+(valor*0.0321507));
+        }
+        //para granos
+        else if(cbx2.getSelectedItem()=="Granos" && cbx3.getSelectedItem()=="Gramos"){
+            txtResultado.setText(""+(valor*0.06479891));
+        }
+        //para kilogramos
         else if(cbx2.getSelectedItem()=="Kilogramos" && cbx3.getSelectedItem()=="Gramos"){
-            txtResultado.setText(""+(valor *(1000/1)));
+            txtResultado.setText(""+(valor*1000));
         }
-        else if(cbx2.getSelectedItem()=="Kilogramos" && cbx3.getSelectedItem()=="Libras"){
-            txtResultado.setText(""+(valor*2.205));
+        else if(cbx2.getSelectedItem()=="Kilogramos" && cbx3.getSelectedItem()=="Libras (avdp)"){
+            txtResultado.setText(""+(valor*2.20462));
+        }
+        else if(cbx2.getSelectedItem()=="Kilogramos" && cbx3.getSelectedItem()=="Onzas (avdp)"){
+            txtResultado.setText(""+(valor*35.2739));
+        }
+        //Para libras (troy)
+        else if(cbx2.getSelectedItem()=="Libras Troy" && cbx3.getSelectedItem()=="Gramos"){
+            txtResultado.setText(""+(valor*373.2417));
+        }
+        else if(cbx2.getSelectedItem()=="Libras Troy" && cbx3.getSelectedItem()=="Libras (avdp)"){
+            txtResultado.setText(""+(valor*0.8228571));
+        }
+        else if(cbx2.getSelectedItem()=="Libras Troy" && cbx3.getSelectedItem()=="Granos"){
+            txtResultado.setText(""+(valor*5760));
+        }
+        else if(cbx2.getSelectedItem()=="Libras Troy" && cbx3.getSelectedItem()=="Kilogramos"){
+            txtResultado.setText(""+(valor*0.3732417));
+        }
+        //Para libras(avdp)
+        else if(cbx2.getSelectedItem()=="Libras AVDP" && cbx3.getSelectedItem()=="Gramos"){
+            txtResultado.setText(""+(valor*453.59237));
+        }
+        //para Microgramos
+        else if(cbx2.getSelectedItem()=="Microgramos" && cbx3.getSelectedItem()=="Gramos"){
+            txtResultado.setText(""+(valor*(1.0*0.000001)));
+        }
+        //para Miligramo
+        else if(cbx2.getSelectedItem()=="Miligramos" && cbx3.getSelectedItem()=="Gramos"){
+            txtResultado.setText(""+(valor*0.001));
+        }
+        else if(cbx2.getSelectedItem()=="Miligramos" && cbx3.getSelectedItem()=="Kilogramos"){
+            txtResultado.setText(""+(valor*0.000001));
+        }
+        else if(cbx2.getSelectedItem()=="Miligramos" && cbx3.getSelectedItem()=="Libras troy"){
+            txtResultado.setText(""+(valor*2.679*0.000001));
+        }
+        else if(cbx2.getSelectedItem()=="Miligramos" && cbx3.getSelectedItem()=="Libras avdp"){
+            txtResultado.setText(""+(valor*2.204*0.000001));
+        }
+        else if(cbx2.getSelectedItem()=="Miligramos" && cbx3.getSelectedItem()=="Onzas troy"){
+            txtResultado.setText(""+(valor*3.21507*0.00001));
+        }
+        else if(cbx2.getSelectedItem()=="Miligramos" && cbx3.getSelectedItem()=="Onzas avdp"){
+            txtResultado.setText(""+(valor*3.52739*0.00001));
         }
 
         //==============================LONGITUD==========================================================
@@ -854,17 +949,167 @@ public class convercion extends javax.swing.JFrame {
        
 
         //==============================VOLUMEN==========================================================
-        if(cbx2.getSelectedItem()=="Litros" && cbx3.getSelectedItem()=="Litros"){
-            txtResultado.setText(""+valor);
+        //################## PARA ACRE-FEET
+        if(cbx2.getSelectedItem()=="Acre-Feet" && cbx3.getSelectedItem()=="Galones(US)"){
+            txtResultado.setText(""+valor*325851.0);
         }
-        else if(cbx2.getSelectedItem()=="Litros" && cbx3.getSelectedItem()=="Mililitros"){
+        if(cbx2.getSelectedItem()=="Acre-Feet" && cbx3.getSelectedItem()=="Litros"){
+            txtResultado.setText(""+valor*1233481.0);
+        }
+        if(cbx2.getSelectedItem()=="Acre-Feet" && cbx3.getSelectedItem()=="Metros Cubicos"){
+            txtResultado.setText(""+valor*1233.4818);
+        }
+        //################## PARA ACRE PULGADA
+        else if(cbx2.getSelectedItem()=="Acre Pulgada" && cbx3.getSelectedItem()=="Galones(US)"){
+            txtResultado.setText(""+(valor *27154.286));
+        }
+        else if(cbx2.getSelectedItem()=="Acre Pulgada" && cbx3.getSelectedItem()=="Metros Cubicos"){
+            txtResultado.setText(""+(valor *102.79033));
+        }
+        else if(cbx2.getSelectedItem()=="Acre Pulgada" && cbx3.getSelectedItem()=="Pies Cubicos"){
+            txtResultado.setText(""+(valor *3630));
+        }
+        //################## PARA BARRILES
+        else if(cbx2.getSelectedItem()=="Barriles" && cbx3.getSelectedItem()=="Barriles(US dry)"){
+            txtResultado.setText(""+(valor *1.03125));
+        }
+        else if(cbx2.getSelectedItem()=="Barriles" && cbx3.getSelectedItem()=="Galones(US liq)"){
+            txtResultado.setText(""+(valor *31.5));
+        }
+        else if(cbx2.getSelectedItem()=="Barriles" && cbx3.getSelectedItem()=="Galones(UK)"){
+            txtResultado.setText(""+(valor *26.22925));
+        }
+        else if(cbx2.getSelectedItem()=="Barriles" && cbx3.getSelectedItem()=="Litros"){
+            txtResultado.setText(""+(valor *119.23713));
+        }
+        else if(cbx2.getSelectedItem()=="Barriles" && cbx3.getSelectedItem()=="Metros Cubicos"){
+            txtResultado.setText(""+(valor *0.11924047));
+        }
+        else if(cbx2.getSelectedItem()=="Barriles" && cbx3.getSelectedItem()=="Pies Cubicos"){
+            txtResultado.setText(""+(valor *4.2109375));
+        }
+        else if(cbx2.getSelectedItem()=="Barriles" && cbx3.getSelectedItem()=="Pulgadas Cubicas"){
+            txtResultado.setText(""+(valor *7276.5));
+        }
+        //################## PARA CENTIMETRO CUBICO
+        else if(cbx2.getSelectedItem()=="Centimetro cubico" && cbx3.getSelectedItem()=="Galones(US dry)"){
+            txtResultado.setText(""+(valor *0.00022702));
+        }
+        else if(cbx2.getSelectedItem()=="Centimetro cubico" && cbx3.getSelectedItem()=="Metros Cubicos"){
+            txtResultado.setText(""+(valor *1.0*Math.pow(10, -6)));
+        }
+        else if(cbx2.getSelectedItem()=="Centimetro cubico" && cbx3.getSelectedItem()=="Pies Cubicos"){
+            txtResultado.setText(""+(valor *3.531*Math.pow(10, -5)));
+        }
+        else if(cbx2.getSelectedItem()=="Centimetro cubico" && cbx3.getSelectedItem()=="Pulgadas Cubicas"){
+            txtResultado.setText(""+(valor *0.0610237));
+        }
+        else if(cbx2.getSelectedItem()=="Centimetro cubico" && cbx3.getSelectedItem()=="Yardas Cubicas"){
+            txtResultado.setText(""+(valor *1.30795*Math.pow(10, -6)));
+        }
+        //################## PARA DECIMETRO CUBICO
+        else if(cbx2.getSelectedItem()=="Decimetro cubico" && cbx3.getSelectedItem()=="Centimetro Cubicos"){
             txtResultado.setText(""+(valor *1000));
         }
-        else if(cbx2.getSelectedItem()=="Litros" && cbx3.getSelectedItem()=="Galones"){
-            txtResultado.setText(""+(valor *0.26417));
+        else if(cbx2.getSelectedItem()=="Decimetro cubico" && cbx3.getSelectedItem()=="Litros"){
+            txtResultado.setText(""+(valor *1));
         }
-        else if(cbx2.getSelectedItem()=="Litros" && cbx3.getSelectedItem()=="Barriles"){
-            txtResultado.setText(""+(valor *0.0083864));
+        else if(cbx2.getSelectedItem()=="Decimetro cubico" && cbx3.getSelectedItem()=="Metros Cubicos"){
+            txtResultado.setText(""+(valor *0.001));
+        }
+        else if(cbx2.getSelectedItem()=="Decimetro cubico" && cbx3.getSelectedItem()=="Pies Cubicos"){
+            txtResultado.setText(""+(valor *0.0353164));
+        }
+        //################## PARA KILOMETROS
+        else if(cbx2.getSelectedItem()=="Kilometro" && cbx3.getSelectedItem()=="Centimetro Cubicos"){
+            txtResultado.setText(""+(valor *1.0*Math.pow(10, +6)));
+        }
+        else if(cbx2.getSelectedItem()=="Kilometro" && cbx3.getSelectedItem()=="Galones(UK)"){
+            txtResultado.setText(""+(valor *219.9755));
+        }
+        else if(cbx2.getSelectedItem()=="Kilometro" && cbx3.getSelectedItem()=="Galones(US dry)"){
+            txtResultado.setText(""+(valor *227.0271));
+        }
+        else if(cbx2.getSelectedItem()=="Kilometro" && cbx3.getSelectedItem()=="Galones(US liq)"){
+            txtResultado.setText(""+(valor *264.1794));
+        }
+        else if(cbx2.getSelectedItem()=="Kilometro" && cbx3.getSelectedItem()=="Litros"){
+            txtResultado.setText(""+(valor *1000));
+        }
+        else if(cbx2.getSelectedItem()=="Kilometro" && cbx3.getSelectedItem()=="Metros Cubicos"){
+            txtResultado.setText(""+(valor *1));
+        }
+        else if(cbx2.getSelectedItem()=="Kilometro" && cbx3.getSelectedItem()=="Pies Cubicos"){
+            txtResultado.setText(""+(valor *35.31566));
+        }
+        else if(cbx2.getSelectedItem()=="Kilometro" && cbx3.getSelectedItem()=="Pulgadas Cubicas"){
+            txtResultado.setText(""+(valor *61025.45));
+        }
+        else if(cbx2.getSelectedItem()=="Kilometro" && cbx3.getSelectedItem()=="Yardas Cubicas"){
+            txtResultado.setText(""+(valor *1.307987));
+        }
+        //################## PARA YARDAS LITROS
+        else if(cbx2.getSelectedItem()=="Litros" && cbx3.getSelectedItem()=="Pies cubicos"){
+            txtResultado.setText(""+(valor *0.035314));
+        }
+        else if(cbx2.getSelectedItem()=="Litros" && cbx3.getSelectedItem()=="Pulgadas cubico"){
+            txtResultado.setText(""+(valor *61.023));
+        }
+        else if(cbx2.getSelectedItem()=="Litros" && cbx3.getSelectedItem()=="Yardas cubicos"){
+            txtResultado.setText(""+(valor *0.0013079));
+        }
+        //################## PARA METRO CUBICO
+        else if(cbx2.getSelectedItem()=="Metro cubicos" && cbx3.getSelectedItem()=="Centimetro cubicos"){
+            txtResultado.setText(""+(valor *1.0*Math.pow(10, +6)));
+        }
+        else if(cbx2.getSelectedItem()=="Metro cubicos" && cbx3.getSelectedItem()=="Litros"){
+            txtResultado.setText(""+(valor *1000));
+        }
+        else if(cbx2.getSelectedItem()=="Metro cubicos" && cbx3.getSelectedItem()=="Pies Cubico"){
+            txtResultado.setText(""+(valor *35.31466));
+        }
+        else if(cbx2.getSelectedItem()=="Metro cubicos" && cbx3.getSelectedItem()=="Pulgadas cubico"){
+            txtResultado.setText(""+(valor *61023.74));
+        }
+        else if(cbx2.getSelectedItem()=="Metro cubicos" && cbx3.getSelectedItem()=="Yardas cubicos"){
+            txtResultado.setText(""+(valor *1.30795));
+        }
+        //################## PARA MILIMITROS
+        else if(cbx2.getSelectedItem()=="Milimitro" && cbx3.getSelectedItem()=="Litros"){
+            txtResultado.setText(""+(valor *0.001));
+        }
+        //################## PARA PIES CUBICAS
+        else if(cbx2.getSelectedItem()=="Pies Cubico" && cbx3.getSelectedItem()=="Centimetros cubicos"){
+            txtResultado.setText(""+(valor *28316.85));
+        }
+        else if(cbx2.getSelectedItem()=="Pies Cubico" && cbx3.getSelectedItem()=="Litros"){
+            txtResultado.setText(""+(valor *28.316847));
+        }
+        //################## PARA PULGADAS CUBICAS
+        else if(cbx2.getSelectedItem()=="Pulgadas cubico" && cbx3.getSelectedItem()=="Litros"){
+            txtResultado.setText(""+(valor *0.0163870));
+        }
+        else if(cbx2.getSelectedItem()=="Pulgadas cubico" && cbx3.getSelectedItem()=="Metros Cubicos"){
+            txtResultado.setText(""+(valor *1.6387*Math.pow(10, -5)));
+        }
+        else if(cbx2.getSelectedItem()=="Pulgadas cubico" && cbx3.getSelectedItem()=="Milimitros"){
+            txtResultado.setText(""+(valor *16.38706));
+        }
+        //################## PARA YARDAS CUBICAS
+        else if(cbx2.getSelectedItem()=="Yardas cubicos" && cbx3.getSelectedItem()=="Centimetro cubicos"){
+            txtResultado.setText(""+(valor *764554.9));
+        }
+        else if(cbx2.getSelectedItem()=="Yardas cubicos" && cbx3.getSelectedItem()=="litros"){
+            txtResultado.setText(""+(valor *764.554));
+        }
+        else if(cbx2.getSelectedItem()=="Yardas cubicos" && cbx3.getSelectedItem()=="Onzas fl"){
+            txtResultado.setText(""+(valor *25852.6));
+        }
+        else if(cbx2.getSelectedItem()=="Yardas cubicos" && cbx3.getSelectedItem()=="Pies Cubicos"){
+            txtResultado.setText(""+(valor *27));
+        }
+        else if(cbx2.getSelectedItem()=="Yardas cubicos" && cbx3.getSelectedItem()=="Pulgadas cubicas"){
+            txtResultado.setText(""+(valor *46656));
         }
         
         //==============================TIEMPO==========================================================
@@ -925,14 +1170,31 @@ public class convercion extends javax.swing.JFrame {
         SubstanceLookAndFeel.setCurrentTheme("org.jvnet.substance.theme.SubstanceCremeTheme");
         */
         
-            
-        //DECORAR FORMULARIOS CON TEMAS
+         /*   
+        //DECORAR FORMULARIOS CON TEMAS skinlf
         try {
             JFrame.setDefaultLookAndFeelDecorated(true); //decorar a formulario si
             SkinLookAndFeel.setSkin(SkinLookAndFeel.loadThemePack("Themes/chaNinja-Bluethemepack.zip"));
             UIManager.setLookAndFeel("com.l2fprod.gui.plaf.skin.SkinLookAndFeel");
         } catch (Exception e) {
+        } */
+        
+         //DECORAR FORMULARIOS CON TEMAS: jtatoo
+        try {
+            JFrame.setDefaultLookAndFeelDecorated(true); //decorar a formulario si
+           // UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel");
+            //UIManager.setLookAndFeel("com.jtattoo.plaf.noire.NoireLookAndFeel");
+            //UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");
+            //UIManager.setLookAndFeel("com.jtattoo.plaf.mint.MintLookAndFeel");
+            //UIManager.setLookAndFeel("com.jtattoo.plaf.acryl.AcrylLookAndFeel");
+            //UIManager.setLookAndFeel("com.jtattoo.plaf.aero.AeroLookAndFeel");
+            //UIManager.setLookAndFeel("com.jtattoo.plaf.hifi.HiFiLookAndFeel");
+            //UIManager.setLookAndFeel("com.jtattoo.plaf.fast.FastLookAndFeel");
+            //UIManager.setLookAndFeel("com.jtattoo.plaf.texture.TextureLookAndFeel");
+            UIManager.setLookAndFeel("com.jtattoo.plaf.luna.LunaLookAndFeel");
+        } catch (Exception e) {
         }
+        
         
         /*
         try {
@@ -958,7 +1220,7 @@ public class convercion extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new convercion().setVisible(true);
+                new conversionUnidades().setVisible(true);
             }
         });
     }
@@ -969,6 +1231,8 @@ public class convercion extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbx2;
     private javax.swing.JComboBox<String> cbx3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
